@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess Number</title>
+</head>
+<body>
+	<h1>Guess Number</h1>
+	<h3>Enter your answer (0-9), and click to submit</h3>
+	<input type="number" id="guess">
+	<button onclick="check_number()">Submit</button>
+	<script>
+		var random_number = Math.floor(Math.random() * 10);
+		function check_number(){
+			var	your_number = document.getElementById('guess').value;
+			if(your_number == random_number)
+			{
+				alert('Correct');
+			}
+			else if(your_number > random_number)
+			{
+				alert("Too High");
+			}
+			else
+			{
+				alert('Too Low');
+			}
+		}
+	</script>
+</body>
+</html>
